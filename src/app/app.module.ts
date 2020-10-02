@@ -12,6 +12,8 @@ import { HomeComponent } from './home/home.component';
 import { Page404Component } from './page404/page404.component';
 import { DetailStockComponent } from './stock/detail-stock/detail-stock.component';
 import { StorageDemoComponent } from './storage-demo/storage-demo.component';
+import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { CategoryComponent } from './shopping-list/category/category.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { StorageDemoComponent } from './storage-demo/storage-demo.component';
     HomeComponent,
     Page404Component,
     DetailStockComponent,
-    StorageDemoComponent
+    StorageDemoComponent,
+    ShoppingListComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,
