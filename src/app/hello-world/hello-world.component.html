@@ -1,0 +1,30 @@
+<h2 class="pretty">hello-world works!</h2>
+<p  [hidden]="true">Ma variable vaut {{variable}}</p>
+
+<p>Ma fonction retourne {{affichage()}}</p>
+<h3 [ngClass] ="{pretty:true}">Two way Binding</h3>
+<input type="text" [(ngModel)]="champ" >{{champ}}
+<h3>Selector binding only in HTML</h3>
+<div #div>Mon message</div>
+
+<p>Affichage du contenu de ma div : {{afficheDiv(div)}}</p>
+<input type="text" [(ngModel)]="color">
+<div [style.background-color]="color">Style 1</div>
+<div [ngStyle]="{'color':color}">Style 2</div>
+
+<h3>Boucle for</h3>
+<ul>
+  <li *ngFor="let value of [1,2,3,4,5,6]; let i=index" [hidden]="value % 2 ===0">{{value}} - {{i}}</li>
+</ul>
+
+<button (click)="incr()">INCREMENTER</button>{{incrementation}}
+
+<select #select (change)="changeValue(select)">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+</select>
+
+

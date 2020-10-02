@@ -1,0 +1,28 @@
+<p>stock works!</p>
+
+<div style="overflow-x:auto;">
+<table >
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>Creation Date</th>
+  </tr>
+  <tr *ngFor="let value of stock;" >
+    <ng-container *ngIf="value.stockQuantity>0">
+      <td><a routerLink="/stock/{{value.id}}">{{value.title}}</a></td>
+      <td>{{value.description}} </td>
+      <td [ngClass]="{
+            'cheap' : value.price < 200,
+            'expensive' : value.price >= 200
+         }">{{value.price}} </td>
+      <td>{{value.stockQuantity}} </td>
+      <td>{{value.creationdate}} </td>
+      <td><button (click)="decr(value)">Buy</button></td>
+    </ng-container>
+
+  </tr>
+</table>
+</div>
+<router-outlet></router-outlet>
